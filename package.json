@@ -1,0 +1,27 @@
+{
+  "name": "sails.form",
+  "version": "0.0.1",
+  "description": "Create HTML form based on sailsjs model",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/index.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twhtanghk/sails.form.git"
+  },
+  "author": "Tommy Tang <twhtanghk@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/twhtanghk/sails.form/issues"
+  },
+  "homepage": "https://github.com/twhtanghk/sails.form#readme",
+  "dependencies": {
+    "forms": "^1.3.0",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.12.5",
+    "mocha": "^3.3.0"
+  }
+}
