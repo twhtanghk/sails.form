@@ -12,7 +12,7 @@ class Ionic1 extends Renderer
     """
       <label class="item item-input">
         <span class="input-label"><%=name%></span>
-        <input type="<%=type%>">
+        <input type="<%=type%>" ng-model="model.<%=name%>">
       </label>
     """
 
