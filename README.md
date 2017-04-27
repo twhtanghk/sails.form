@@ -6,24 +6,14 @@ Create HTML form based on sailsjs model
 npm install sails.form
 ```
 
-## Function
-. [Caolan Form](https://github.com/caolan/forms) object
-```
-sailsForm.form(attributes, exlcude = null, include = '__all__'): return caolan form object
-```
+## Extend renderer to generate html for different front end platform
+see [ionic1.coffee](ionic1.coffee) to implement formTemplate, fieldTemplate, and fsTemplate
 
-. Default HTML form
+## Sample
 ```
-sailsForm.html(attributes, exclude = null, include = '__all__'): return default html form
-
-. Bootstrap form
-```
-sailsForm.form(model.attributes, exclude = null, include = '__all__').toHTML(iterator): iterate attributes to render HTML form
-```
-
-### Sample
-```
-sailsForm = require 'sails.form'
-
-console.log sailsForm.html sails.models.user.attributes
+Form = require 'sails.form'
+form = new Form
+  model: sails.models.vm
+  include: ['name', 'disk', 'size']
+console.log form.html values
 ```

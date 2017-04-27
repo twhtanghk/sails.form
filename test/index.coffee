@@ -1,17 +1,10 @@
 util = require 'util'
-sailsForm = require '../index'
-model = require('./model.coffee').attributes
+Form = require '../index.coffee'
 
 describe 'sails form', ->
-  it 'attrs', ->
-    console.log util.inspect sailsForm.attrs model
-
-  it 'model', ->
-    console.log util.inspect sailsForm.model model
-
-  it 'form', ->
-    console.log util.inspect sailsForm.form model
-
-  it 'html', ->
-    console.log util.inspect sailsForm.html model
-
+  ['./model1.coffee', './model2.coffee'].map (name) ->
+    it name, ->
+      form = new Form 
+        model: require name
+        include: ['name', 'disk', 'memory']
+      console.log util.inspect form.html()
