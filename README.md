@@ -7,7 +7,7 @@ npm install sails.form
 ```
 
 ## Extend renderer to generate html for different front end platform
-see [ionic1.coffee](ionic1.coffee) to implement formTemplate, fieldTemplate, and fsTemplate
+see [ionic1.coffee](ionic1.coffee) to implement formTemplate, fieldTemplate, fieldValidTemplate and fsTemplate
 
 ## Sample
 ```
