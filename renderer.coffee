@@ -23,6 +23,6 @@ class Renderer
       attrs = _.pick attrs, form.include
     htmls = _.map attrs, (attr, name) =>
       @fieldHtml form, name, values[name]
-    @formTemplate()({htmls: htmls, separator: @fsTemplate()})
+    @formTemplate()({htmls: htmls, separator: @fsTemplate()()})
 
 module.exports = Renderer
